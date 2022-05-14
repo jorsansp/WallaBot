@@ -1,0 +1,2 @@
+# WallaBot
+Bot for wallapop
