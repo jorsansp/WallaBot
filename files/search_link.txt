@@ -1,0 +1,1 @@
+https://es.wallapop.com/app/search?latitude=39.46895&longitude=-0.37686&keywords=game%20boy&filters_source=quick_filters&order_by=newest

@@ -8,12 +8,16 @@ from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
+import unicodedata
+import re
 
 
 @step(u'I acces to wallapop site')
 def step_impl(context):
     driver = context.driver = webdriver.Chrome(ChromeDriverManager().install())
-    URL ='https://es.wallapop.com/app/search?latitude=39.46895&longitude=-0.37686&keywords=game%20boy&filters_source=quick_filters&order_by=newest'
+    with open('files/search_link.txt') as f:
+        URL = f.readline()
+    f.close()
     driver.get(URL)
 
 
