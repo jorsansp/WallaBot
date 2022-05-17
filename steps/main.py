@@ -12,7 +12,7 @@ import unicodedata
 import re
 
 
-@step(u'I acces to wallapop site')
+@step(u'I access to wallapop site')
 def step_impl(context):
     driver = context.driver = webdriver.Chrome(ChromeDriverManager().install())
     with open('files/search_link.txt') as f:
@@ -21,7 +21,7 @@ def step_impl(context):
     driver.get(URL)
 
 
-@step(u'I close the window')
+@step(u'close the window')
 def step_impl(context):
     driver = context.driver
     try:
@@ -40,7 +40,7 @@ def step_impl(context):
         pass
 
 
-@step(u'I read all information about screen items')
+@step(u'read all information about screen items')
 def step_impl(context):
     driver = context.driver
     context.cards = cards = driver.find_elements_by_xpath('//*[@class="ItemCardList__item"]')
@@ -80,14 +80,14 @@ def step_impl(context):
     context.new_cards = new_cards
 
 
-@step(u'I save the information in file')
+@step(u'save the information in file')
 def step_impl(context):
     driver = context.driver
     #file = open('files/items.txt', 'w')
    # for _ in range(len(context.cards)):
 
 
-@step(u'I close the browser')
+@step(u'close the browser')
 def step_impl(context):
     driver = context.driver
     driver.quit()
